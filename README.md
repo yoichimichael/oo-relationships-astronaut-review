@@ -34,7 +34,7 @@ Your goal is to build out all of the methods listed in the deliverables. Do your
 
 ### Domain Modeling
 
-First step is to model the domain you are building out. As tracking application for all of NASA, `Shuttle`s will have many `Astronaut`s while `Astronaut`s will be allowed to selected to ride on many `Shuttle`s. How do they keep track of this? Individual `Mission`s of course! You cannot join a `Shuttle` without being selected for a `Mission`.
+First step is to model the domain you are building out. As tracking application for all of NASA, `Shuttle`s will have many `Astronaut`s while `Astronaut`s will be allowed to selected to ride on many `Shuttle`s. How do they keep track of this? Individual `Mission`s, of course! You cannot join a `Shuttle` without being selected for a `Mission`.
 
 * What are your models?
 * What does your schema look like?
@@ -60,10 +60,10 @@ Questions you should ask yourself:
   * returns a `Fixnum` that is the total number of astronauts that the shuttle can host
 * `Shuttle#add_astronaut`
   * takes in an argument of an `Astronaut` instance and adds them to this shuttle's list of astronauts as long as it doesn't exceed the shuttle's capacity
-* `Shuttle#shuttle_population`
+* `Shuttle#current_astronauts`
   * returns an `Array` of all the astronauts on this shuttle
 * `Shuttle.all`
-  * returns an `Array` of all the currently running shuttles
+  * returns an `Array` of all of NASA's currently running shuttles
 * `Shuttle.find_by_model`
   * takes a `Fixnum` argument that is a model number and returns a `Shuttle` instance that matches that argument
 
@@ -73,6 +73,8 @@ Questions you should ask yourself:
   * returns a `String` that is the astronaut's name
 * `Astronaut#age`
   * returns a `Fixnum` that is the age of the astronaut
+* `Astronaut#specialty`
+  * returns a `String`
 * `Astronaut#shuttles`
   * returns an `Array` of this astronaut's shuttles
 * `Astronaut#join_shuttle`
@@ -93,7 +95,13 @@ Questions you should ask yourself:
 
 ### Advanced Methods - Analytics!
 
-Our tracking application is working well. Let's first make a commit!
+Our tracking application has some basic functionality. Let's first make a commit!
+
+```
+git add .
+git commit -m "can create shuttles astronauts and missions"
+git push 
+```
 
 Now we want to build out some useful features so `Shuttle`s and `Astronaut`s and get more value out of our app.
 
