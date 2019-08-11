@@ -6,7 +6,8 @@ In this repo, we will be reviewing object relationships in Ruby, specifically th
 
 ## Introduction
 
-![NASA](http://www.spitzer.caltech.edu/spitzer15/images/NASASelfies_Icon.png?1534553315 =250x)
+<img src="http://www.spitzer.caltech.edu/spitzer15/images/NASASelfies_Icon.png?1534553315" alt="NASA Logo" width="200"/>
+<!-- ![NASA](http://www.spitzer.caltech.edu/spitzer15/images/NASASelfies_Icon.png?1534553315 =250x) -->
 
 You've just been hired by NASA to create an app that tracks all of their missions to Mars. The application needs to be aware of the astronauts, the shuttles, and each mission to the Red Planet.
 
