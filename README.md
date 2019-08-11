@@ -63,13 +63,13 @@ Questions you should ask yourself:
 * `Shuttle#capacity`
   * returns a `Fixnum` that is the total number of astronauts that the shuttle can host
 * `Shuttle#add_astronaut`
-  * takes in an argument of an `Astronaut` instance and adds them to this shuttle's list of astronauts as long as it doesn't exceed the shuttle's capacity
+  * takes in an argument of an `Astronaut` instance and a launch date, and adds them to this shuttle's list of astronauts as long as it doesn't exceed the shuttle's capacity
 * `Shuttle#current_astronauts`
-  * returns an `Array` of all the astronauts on this shuttle
+  * returns an `Array` of all the astronauts who have been on this shuttle
 * `Shuttle.all`
   * returns an `Array` of all of NASA's currently running shuttles
 * `Shuttle.find_by_model`
-  * takes a `Fixnum` argument that is a model number and returns a `Shuttle` instance that matches that argument
+  * takes a `String` argument that is a model number and returns a `Shuttle` instance that matches that argument
 
 **`ASTRONAUT`**
 
