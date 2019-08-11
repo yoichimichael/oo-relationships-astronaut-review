@@ -1,11 +1,11 @@
-Blood Oath Lab
+OO Relationships Review in Ruby
 ==============
 
-In this project, we will be practicing object relationships in Ruby, with a particular emphasis on the `has_many` `through` relationship (aka: many-to-many). Please read the whole README before writing any code!
+In this repo, we will be reviewing object relationships in Ruby, specifically the `has_many` `through` relationship (aka: many-to-many).
 
 ## Introduction
 
-You've been approached by your local cult leaders to build out a foundation for a new app they are all using to gather recruits. As the open-minded freelancers that you are, you've agreed to do so!
+You've just been hired by NASA to create an app that tracks all of their missions to Mars. The application needs to be aware of the astronauts, the shuttles, and each mission to the Red Planet.
 
 ---
 
