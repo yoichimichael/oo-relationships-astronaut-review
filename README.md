@@ -57,7 +57,7 @@ Questions you should ask yourself:
 ![Marvin Martian](https://media.giphy.com/media/5h7nwwMJdNpxoWxmlh/giphy-downsized.gif)
 
 **`SHUTTLE`**
-![Shuttle Cartoon](https://media.giphy.com/media/l4FGC3dPGy2VJJsIw/giphy-downsized.gif)
+
 * `Shuttle#model`
   * returns a `Fixnum` that is the model number of the shuttle
 * `Shuttle#capacity`
@@ -72,18 +72,17 @@ Questions you should ask yourself:
   * takes a `Fixnum` argument that is a model number and returns a `Shuttle` instance that matches that argument
 
 **`ASTRONAUT`**
-![Astronaut Cartoon](https://media.giphy.com/media/xT8qBhrlNooHBYR9f2/giphy.gif)
 
 * `Astronaut#name`
   * returns a `String` that is the astronaut's name
 * `Astronaut#age`
   * returns a `Fixnum` that is the age of the astronaut
 * `Astronaut#specialty`
-  * returns a `String`
+  * returns a `String` that is the astronaut's focus of study on Mars
 * `Astronaut#shuttles`
-  * returns an `Array` of this astronaut's shuttles
+  * returns an `Array` of this astronaut's shuttles: past, present, and future
 * `Astronaut#join_shuttle`
-  * takes in an argument of a `Shuttle` instance and adds this astronaut to the shuttle's list of astronauts if it doesn't exceed this shuttle's capacity
+  * takes in an argument of a `Shuttle` instance and adds this astronaut to the shuttle's list of astronauts if it doesn't exceed that shuttle's capacity. If the shuttle is already full, print a message to the screen: `This shuttle is at capacity!`.
 * `Astronaut.all`
   * returns an `Array` of all the astronauts
 * `Astronaut.most_missions`
@@ -108,38 +107,40 @@ git commit -m "can create shuttles astronauts and missions"
 git push
 ```
 
+![Astronaut Cartoon](https://media.giphy.com/media/xT8qBhrlNooHBYR9f2/giphy.gif)
+
 Now we want to build out some useful features so `Shuttle`s and `Astronaut`s and get more value out of our app.
 
 **`SHUTTLE`**
 
 * `Shuttle#average_age`
   * returns a `Float` that is the average age of this shuttle's astronauts
-* `Shuttle#my_astronauts_mottos`
-  * prints out all of the mottos for this shuttle's astronauts
-* `Shuttle.least_popular`
-  * returns the `Shuttle` instance who has the least number of astronauts :(
-* `Shuttle.most_common_location`
-  * returns a `String` that is the location with the most shuttles
+* `Shuttle#astronauts_specialties`
+  * prints out all of the specialties for this shuttle's astronauts
+* `Shuttle.smallest_mission`
+  * returns the `Shuttle` instance which has the least number of astronauts
+* `Shuttle.most_common_model`
+  * returns a `Fixnum` that is the most popular model number
 
 **`ASTRONAUT`**
 
-* `Follower#my_shuttles_slogans`
-  * prints out all of the slogans for this astronaut's shuttles
-* `Follower.most_active`
-  * returns the `Follower` instance who has joined the most shuttles
-* `Follower.top_ten`
-  * returns an `Array` of astronauts; they are the ten most active astronauts
+* `Astronaut.most_active`
+  * returns the `Astronaut` instance who has been assigned to the most shuttles
+* `Astronaut.top_three`
+  * returns an `Array` of astronauts; they are the three most active astronauts
 
 **`MISSION`**
 
-* `Mission.first_oath`
-  * returns the `Follower` instance for the astronaut that made the very first mission
+* `Mission.first_launch`
+  * returns the `Astronaut` instances for the astronauts that were selected for the first mission to Mars
 
 ---
 
 ### BONUS!
 
-Our platform is done! Let's commit our code!
+![Shuttle Cartoon](https://media.giphy.com/media/l4FGC3dPGy2VJJsIw/giphy-downsized.gif)
+
+Our platform is done! Let's commit our code again!
 
 Now one highly requested feature from `Astronauts`s using your app that you plan to paywall ($$$) is to see your fellow shuttle members. See if you can implement this method.
 
