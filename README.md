@@ -20,7 +20,7 @@ Before you begin, first run the following command in your terminal to install th
 bundle install
 ```
 
-You can now add all of your Ruby files for your models in the `app/models` folder. You **do not** need to require them. They will be automagically require for you so long as you use the `tools/console.rb` file to run your code.
+You can now add all of your Ruby files for your models in the `app/models` folder. You **do not** need to require them. They will be automagically required for you so long as you use the `tools/console.rb` file to run your code.
 
 Through this file, we've provided to you a console that you can use to test your code. To enter a console session, run `ruby tools/console.rb` from the command line. You'll be able to test out the methods that you write here. Take a look at that file to see how you can pre-define variables and create object instances, rather than manually doing it in every single console session.
 
@@ -36,7 +36,7 @@ Your goal is to build out all of the methods listed in the deliverables. Do your
 
 ![Shuttle to Space](https://media.giphy.com/media/RHBHqdYBUmmkw/giphy.gif)
 
-First step is to model the domain you are building out. As tracking application for all of NASA, `Shuttle`s will have many `Astronaut`s while `Astronaut`s will be allowed to selected to ride on many `Shuttle`s. How do they keep track of this? Individual `Mission`s, of course! You cannot join a `Shuttle` without being selected for a `Mission`.
+First step is to model the domain you are building out. As a tracking application for all of NASA, `Shuttle`s will have many `Astronaut`s while `Astronaut`s will be selected to ride on many `Shuttle`s. How do they keep track of this? Individual `Mission`s, of course! You cannot join a `Shuttle` without being selected for a `Mission`.
 
 * What are your models?
 * What does your schema look like?
@@ -82,7 +82,7 @@ Questions you should ask yourself:
 * `Astronaut#shuttles`
   * returns an `Array` of this astronaut's shuttles: past, present, and future
 * `Astronaut#join_shuttle`
-  * takes in an argument of a `Shuttle` instance and adds this astronaut to the shuttle's list of astronauts if it doesn't exceed that shuttle's capacity. If the shuttle is already full, print a message to the screen: `This shuttle is at capacity!`.
+  * takes in an argument of a `Shuttle` instance and adds this astronaut to the shuttle's list of astronauts if it doesn't exceed that shuttle's capacity. If the shuttle is already full, print the following message: `This shuttle is at capacity!`.
 * `Astronaut.all`
   * returns an `Array` of all the astronauts
 * `Astronaut.most_missions`
@@ -109,7 +109,7 @@ git push
 
 ![Astronaut Cartoon](https://media.giphy.com/media/xT8qBhrlNooHBYR9f2/giphy.gif)
 
-Now we want to build out some useful features so `Shuttle`s and `Astronaut`s and get more value out of our app.
+Now we want to build out some useful features so `Shuttle`s and `Astronaut`s can get more value out of our app.
 
 **`SHUTTLE`**
 
@@ -153,12 +153,12 @@ A highly requested feature is to restrict ages for astronauts-- they need to be 
   * returns a `Fixnum` that is the minimum age required for astronauts
 * Edit `Shuttle#add_astronaut`
   * takes in an argument of an `Astronaut` instance and adds them to this shuttle's list of astronauts
-  * NOW this is changed such that if the given `Astronaut` instance is not of age:
+  * NOW this should function so that if the given `Astronaut` instance is not of age:
     * do not let them join the mission
     * print out a friendly message informing them that they are too young
 * Edit `Astronaut#join_shuttle`
   * takes in an argument of a `Shuttle` instance and adds this astronaut to the shuttle's list of astronauts
-  * NOW this is changed such that if you don't meet the minimum age requirement of the given `Shuttle` instance:
+  * NOW this should function so that if you don't meet the minimum age requirement of the given `Shuttle` instance:
     * do not let them join the mission
     * print out a friendly message informing them that they are too young
 
