@@ -56,18 +56,16 @@ Questions you should ask yourself:
 
 * `Shuttle#model`
   * returns a `Fixnum` that is the model number of the shuttle
-* `Shuttle#location`
-  * returns a `String` that is the city where the shuttle is located
+* `Shuttle#capacity`
+  * returns a `Fixnum` that is the total number of astronauts that the shuttle can host
 * `Shuttle#add_astronaut`
-  * takes in an argument of an `Astronaut` instance and adds them to this shuttle's list of astronauts
+  * takes in an argument of an `Astronaut` instance and adds them to this shuttle's list of astronauts as long as it doesn't exceed the shuttle's capacity
 * `Shuttle#shuttle_population`
-  * returns a `Fixnum` that is the number of astronauts in this shuttle
+  * returns an `Array` of all the astronauts on this shuttle
 * `Shuttle.all`
   * returns an `Array` of all the currently running shuttles
-* `Shuttle.find_by_name`
-  * takes a `String` argument that is a name and returns a `Shuttle` instance whose name matches that argument
-* `Shuttle.find_by_founding_year`
-  * takes a `Fixnum` argument that is a year and returns all of the shuttles founded in that year
+* `Shuttle.find_by_model`
+  * takes a `Fixnum` argument that is a model number and returns a `Shuttle` instance that matches that argument
 
 **`ASTRONAUT`**
 
@@ -78,11 +76,11 @@ Questions you should ask yourself:
 * `Astronaut#shuttles`
   * returns an `Array` of this astronaut's shuttles
 * `Astronaut#join_shuttle`
-  * takes in an argument of a `S` instance and adds this astronaut to the shuttle's list of astronauts
+  * takes in an argument of a `Shuttle` instance and adds this astronaut to the shuttle's list of astronauts
 * `Astronaut.all`
   * returns an `Array` of all the astronauts
-* `Astronaut.of_a_certain_age`
-  * takes a `Fixnum` argument that is an age and returns an `Array` of astronauts who are the given age or older
+* `Astronaut.most_missions`
+  * takes a `String` argument that is an astronaut's name and returns an instance of an astronaut who has been to Mars the most times 
 
 **`MISSION`**
 
