@@ -59,7 +59,7 @@ Questions you should ask yourself:
 **`SHUTTLE`**
 
 * `Shuttle#model`
-  * returns a `Fixnum` that is the model number of the shuttle
+  * returns a `String` that is the model number of the shuttle
 * `Shuttle#capacity`
   * returns a `Fixnum` that is the total number of astronauts that the shuttle can host
 * `Shuttle#add_astronaut`

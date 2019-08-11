@@ -16,13 +16,13 @@ class Astronaut
     @@all
   end
 
+  def self.most_missions
+  end
+
   def shuttles
   end
 
   def join_shuttle
-  end 
-
-  def most_missions
   end
 
 end

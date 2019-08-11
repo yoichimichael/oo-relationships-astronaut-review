@@ -14,13 +14,13 @@ class Shuttle
     @@all
   end
 
+  def self.find_by_model
+  end
+
   def add_astronaut
   end
 
   def current_astronauts
   end
-
-  def find_by_model
-  end 
 
 end
