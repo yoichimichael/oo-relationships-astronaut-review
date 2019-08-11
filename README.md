@@ -142,24 +142,24 @@ Now we want to build out some useful features so `Shuttle`s and `Astronaut`s and
 
 Our platform is done! Let's commit our code again!
 
-Now one highly requested feature from `Astronauts`s using your app that you plan to paywall ($$$) is to see your fellow shuttle members. See if you can implement this method.
+Now NASA wants to release this app so that their astronauts can use it to see their fellow shuttle members in advance of a mission. See if you can implement this method.
 
-* `Astronaut#fellow_cult_members`
-  * returns a unique `Array` of astronauts who are in the same cults as you
+* `Astronaut#fellow_mission_members`
+  * returns a unique `Array` of astronauts who are on the same mission as you
 
-A highly requested feature from `Shuttle`s using your app that you plan to paywall ($$$) is to restrict ages for recruits. See if you can implement this functionality.
+A highly requested feature is to restrict ages for astronauts-- they need to be at least 25. See if you can implement this functionality.
 
 * `Shuttle#minimum_age`
-  * returns a `Fixnum` that is the minimum age required for astronauts joining this cult
-* `Shuttle#recruit_astronaut`
-  * takes in an argument of a `Follower` instance and adds them to this cult's list of astronauts
-  * NOW this is changed such that if the given `Follower` instance is not of age:
-    * do not let them join the cult
+  * returns a `Fixnum` that is the minimum age required for astronauts
+* Edit `Shuttle#add_astronaut`
+  * takes in an argument of an `Astronaut` instance and adds them to this shuttle's list of astronauts
+  * NOW this is changed such that if the given `Astronaut` instance is not of age:
+    * do not let them join the mission
     * print out a friendly message informing them that they are too young
-* `Follower#join_cult`
-  * takes in an argument of a `Shuttle` instance and adds this astronaut to the cult's list of astronauts
+* Edit `Astronaut#join_shuttle`
+  * takes in an argument of a `Shuttle` instance and adds this astronaut to the shuttle's list of astronauts
   * NOW this is changed such that if you don't meet the minimum age requirement of the given `Shuttle` instance:
-    * do not let them join the cult
+    * do not let them join the mission
     * print out a friendly message informing them that they are too young
 
 Congrats on finishing NASA's mission tracking app for Mars. Let's jump on a shuttle and make the first step towards exploring our solar system.
