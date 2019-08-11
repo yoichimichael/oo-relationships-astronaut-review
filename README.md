@@ -34,6 +34,8 @@ Your goal is to build out all of the methods listed in the deliverables. Do your
 
 ### Domain Modeling
 
+![Shuttle to Space](https://media.giphy.com/media/RHBHqdYBUmmkw/giphy.gif)
+
 First step is to model the domain you are building out. As tracking application for all of NASA, `Shuttle`s will have many `Astronaut`s while `Astronaut`s will be allowed to selected to ride on many `Shuttle`s. How do they keep track of this? Individual `Mission`s, of course! You cannot join a `Shuttle` without being selected for a `Mission`.
 
 * What are your models?
@@ -51,6 +53,8 @@ Questions you should ask yourself:
 * Do I need any other attributes?
 * Should I write any other methods?
 * Am I following *Single Source of Truth*?
+
+![Marvin Martian](https://media.giphy.com/media/5h7nwwMJdNpxoWxmlh/giphy-downsized.gif)
 
 **`SHUTTLE`**
 
@@ -100,7 +104,7 @@ Our tracking application has some basic functionality. Let's first make a commit
 ```
 git add .
 git commit -m "can create shuttles astronauts and missions"
-git push 
+git push
 ```
 
 Now we want to build out some useful features so `Shuttle`s and `Astronaut`s and get more value out of our app.
