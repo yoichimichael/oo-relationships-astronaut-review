@@ -9,4 +9,4 @@ end
 
 binding.pry
 
-puts "Mwahahaha!" # just in case pry is buggy and exits
+puts "Let's go to space!" # just in case pry is buggy and exits
