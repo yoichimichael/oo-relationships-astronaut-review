@@ -57,7 +57,7 @@ Questions you should ask yourself:
 ![Marvin Martian](https://media.giphy.com/media/5h7nwwMJdNpxoWxmlh/giphy-downsized.gif)
 
 **`SHUTTLE`**
-!(Shuttle Cartoon)[https://media.giphy.com/media/l4FGC3dPGy2VJJsIw/giphy-downsized.gif]
+![Shuttle Cartoon](https://media.giphy.com/media/l4FGC3dPGy2VJJsIw/giphy-downsized.gif)
 * `Shuttle#model`
   * returns a `Fixnum` that is the model number of the shuttle
 * `Shuttle#capacity`
@@ -72,7 +72,7 @@ Questions you should ask yourself:
   * takes a `Fixnum` argument that is a model number and returns a `Shuttle` instance that matches that argument
 
 **`ASTRONAUT`**
-!(Astronaut Cartoon)[https://media.giphy.com/media/xT8qBhrlNooHBYR9f2/giphy.gif]
+![Astronaut Cartoon](https://media.giphy.com/media/xT8qBhrlNooHBYR9f2/giphy.gif)
 
 * `Astronaut#name`
   * returns a `String` that is the astronaut's name
