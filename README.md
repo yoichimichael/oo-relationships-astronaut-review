@@ -97,18 +97,18 @@ Our tracking application is working well. Let's first make a commit!
 
 Now we want to build out some useful features so `Shuttle`s and `Astronaut`s and get more value out of our app.
 
-**`Cult`**
+**`SHUTTLE`**
 
-* `Cult#average_age`
+* `Shuttle#average_age`
   * returns a `Float` that is the average age of this shuttle's astronauts
-* `Cult#my_astronauts_mottos`
+* `Shuttle#my_astronauts_mottos`
   * prints out all of the mottos for this shuttle's astronauts
-* `Cult.least_popular`
-  * returns the `Cult` instance who has the least number of astronauts :(
-* `Cult.most_common_location`
+* `Shuttle.least_popular`
+  * returns the `Shuttle` instance who has the least number of astronauts :(
+* `Shuttle.most_common_location`
   * returns a `String` that is the location with the most shuttles
 
-**`Astronaut`**
+**`ASTRONAUT`**
 
 * `Follower#my_shuttles_slogans`
   * prints out all of the slogans for this astronaut's shuttles
@@ -117,7 +117,7 @@ Now we want to build out some useful features so `Shuttle`s and `Astronaut`s and
 * `Follower.top_ten`
   * returns an `Array` of astronauts; they are the ten most active astronauts
 
-**`Mission`**
+**`MISSION`**
 
 * `Mission.first_oath`
   * returns the `Follower` instance for the astronaut that made the very first mission
@@ -128,24 +128,26 @@ Now we want to build out some useful features so `Shuttle`s and `Astronaut`s and
 
 Our platform is done! Let's commit our code!
 
-Now one highly requested feature from `Follower`s using your app that you plan to paywall ($$$) is to see your fellow shuttle members. See if you can implement this method.
+Now one highly requested feature from `Astronauts`s using your app that you plan to paywall ($$$) is to see your fellow shuttle members. See if you can implement this method.
 
-* `Follower#fellow_cult_members`
+* `Astronaut#fellow_cult_members`
   * returns a unique `Array` of astronauts who are in the same cults as you
 
-A highly requested feature from `Cult`s using your app that you plan to paywall ($$$) is to restrict ages for recruits. See if you can implement this functionality.
+A highly requested feature from `Shuttle`s using your app that you plan to paywall ($$$) is to restrict ages for recruits. See if you can implement this functionality.
 
-* `Cult#minimum_age`
+* `Shuttle#minimum_age`
   * returns a `Fixnum` that is the minimum age required for astronauts joining this cult
-* `Cult#recruit_astronaut`
+* `Shuttle#recruit_astronaut`
   * takes in an argument of a `Follower` instance and adds them to this cult's list of astronauts
   * NOW this is changed such that if the given `Follower` instance is not of age:
     * do not let them join the cult
     * print out a friendly message informing them that they are too young
 * `Follower#join_cult`
-  * takes in an argument of a `Cult` instance and adds this astronaut to the cult's list of astronauts
-  * NOW this is changed such that if you don't meet the minimum age requirement of the given `Cult` instance:
+  * takes in an argument of a `Shuttle` instance and adds this astronaut to the cult's list of astronauts
+  * NOW this is changed such that if you don't meet the minimum age requirement of the given `Shuttle` instance:
     * do not let them join the cult
     * print out a friendly message informing them that they are too young
 
-Congrats on finishing your cult social network platform. Time to rake in the $$$!
+Congrats on finishing NASA's mission tracking app for Mars. Let's jump on a shuttle and make the first step towards exploring our solar system.
+
+![Mars Overview](https://media.giphy.com/media/3oriNWIJQ1EK6GQ9gY/giphy-downsized.gif)
