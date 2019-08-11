@@ -48,87 +48,87 @@ Questions you should ask yourself:
 
 * Do I need any other attributes?
 * Should I write any other methods?
-* Am I following _Single Source of Truth_?
+* Am I following *Single Source of Truth*?
 
-**`Cult`**
+**`SHUTTLE`**
 
-* `Cult#name`
-  * returns a `String` that is the cult's name
-* `Cult#location`
-  * returns a `String` that is the city where the cult is located
-* `Cult#founding_year`
-  * returns a `Fixnum` that is the year the cult was founded
-* `Cult#slogan`
-  * returns a `String` that is this cult's slogan
-* `Cult#recruit_follower`
-  * takes in an argument of a `Follower` instance and adds them to this cult's list of followers
-* `Cult#cult_population`
-  * returns a `Fixnum` that is the number of followers in this cult
-* `Cult.all`
-  * returns an `Array` of all the cults
-* `Cult.find_by_name`
-  * takes a `String` argument that is a name and returns a `Cult` instance whose name matches that argument
-* `Cult.find_by_location`
-  * takes a `String` argument that is a location and returns an `Array` of cults that are in that location
-* `Cult.find_by_founding_year`
-  * takes a `Fixnum` argument that is a year and returns all of the cults founded in that year
+* `Shuttle#name`
+  * returns a `String` that is the shuttle's name
+* `Shuttle#location`
+  * returns a `String` that is the city where the shuttle is located
+* `Shuttle#founding_year`
+  * returns a `Fixnum` that is the year the shuttle was founded
+* `Shuttle#slogan`
+  * returns a `String` that is this shuttle's slogan
+* `Shuttle#recruit_astronaut`
+  * takes in an argument of a `Follower` instance and adds them to this shuttle's list of followers
+* `Shuttle#shuttle_population`
+  * returns a `Fixnum` that is the number of followers in this shuttle
+* `Shuttle.all`
+  * returns an `Array` of all the shuttles
+* `Shuttle.find_by_name`
+  * takes a `String` argument that is a name and returns a `Shuttle` instance whose name matches that argument
+* `Shuttle.find_by_location`
+  * takes a `String` argument that is a location and returns an `Array` of shuttles that are in that location
+* `Shuttle.find_by_founding_year`
+  * takes a `Fixnum` argument that is a year and returns all of the shuttles founded in that year
 
-**`Follower`**
+**`ASTRONAUT`**
 
-* `Follower#name`
-  * returns a `String` that is the follower's name
-* `Follower#age`
-  * returns a `Fixnum` that is the age of the follower
-* `Follower#life_motto`
-  * returns a `String` that is the follower's life motto
-* `Follower#cults`
-  * returns an `Array` of this follower's cults
-* `Follower#join_cult`
-  * takes in an argument of a `Cult` instance and adds this follower to the cult's list of followers
-* `Follower.all`
-  * returns an `Array` of all the followers
-* `Follower.of_a_certain_age`
-  * takes a `Fixnum` argument that is an age and returns an `Array` of followers who are the given age or older
+* `Astronaut#name`
+  * returns a `String` that is the astronaut's name
+* `Astronaut#age`
+  * returns a `Fixnum` that is the age of the astronaut
+* `Astronaut#life_motto`
+  * returns a `String` that is the astronaut's life motto
+* `Astronaut#shuttles`
+  * returns an `Array` of this astronaut's shuttles
+* `Astronaut#join_shuttle`
+  * takes in an argument of a `Cult` instance and adds this astronaut to the shuttle's list of astronauts
+* `Astronaut.all`
+  * returns an `Array` of all the astronauts
+* `Astronaut.of_a_certain_age`
+  * takes a `Fixnum` argument that is an age and returns an `Array` of astronauts who are the given age or older
 
-**`BloodOath`**
+**`MISSION`**
 
-* `BloodOath#initiation_date`
-  * returns a `String` that is the initiation date of this blood oath in the format _YYYY-MM-DD_.
-* `BloodOath.all`
-  * returns an `Array` of all the blood oaths
+* `Mission#initiation_date`
+  * returns a `String` that is the initiation date of this mission in the format _YYYY-MM-DD_.
+* `Mission.all`
+  * returns an `Array` of all the missions
 
 ---
 
 ### Advanced Methods - Analytics!
 
-Our cult social network platform is working well. Let's first make a commit!
+Our shuttle social network platform is working well. Let's first make a commit!
 
-Now we want to build out some useful features so `Cult`s and `Follower`s and get more value out of our app.
+Now we want to build out some useful features so `Shuttle`s and `Astronaut`s and get more value out of our app.
 
 **`Cult`**
 
 * `Cult#average_age`
-  * returns a `Float` that is the average age of this cult's followers
-* `Cult#my_followers_mottos`
-  * prints out all of the mottos for this cult's followers
+  * returns a `Float` that is the average age of this shuttle's astronauts
+* `Cult#my_astronauts_mottos`
+  * prints out all of the mottos for this shuttle's astronauts
 * `Cult.least_popular`
-  * returns the `Cult` instance who has the least number of followers :(
+  * returns the `Cult` instance who has the least number of astronauts :(
 * `Cult.most_common_location`
-  * returns a `String` that is the location with the most cults
+  * returns a `String` that is the location with the most shuttles
 
-**`Follower`**
+**`Astronaut`**
 
-* `Follower#my_cults_slogans`
-  * prints out all of the slogans for this follower's cults
+* `Follower#my_shuttles_slogans`
+  * prints out all of the slogans for this astronaut's shuttles
 * `Follower.most_active`
-  * returns the `Follower` instance who has joined the most cults
+  * returns the `Follower` instance who has joined the most shuttles
 * `Follower.top_ten`
-  * returns an `Array` of followers; they are the ten most active followers
+  * returns an `Array` of astronauts; they are the ten most active astronauts
 
-**`BloodOath`**
+**`Mission`**
 
-* `BloodOath.first_oath`
-  * returns the `Follower` instance for the follower that made the very first blood oath
+* `Mission.first_oath`
+  * returns the `Follower` instance for the astronaut that made the very first mission
 
 ---
 
@@ -136,22 +136,22 @@ Now we want to build out some useful features so `Cult`s and `Follower`s and get
 
 Our platform is done! Let's commit our code!
 
-Now one highly requested feature from `Follower`s using your app that you plan to paywall ($$$) is to see your fellow cult members. See if you can implement this method.
+Now one highly requested feature from `Follower`s using your app that you plan to paywall ($$$) is to see your fellow shuttle members. See if you can implement this method.
 
 * `Follower#fellow_cult_members`
-  * returns a unique `Array` of followers who are in the same cults as you
+  * returns a unique `Array` of astronauts who are in the same cults as you
 
 A highly requested feature from `Cult`s using your app that you plan to paywall ($$$) is to restrict ages for recruits. See if you can implement this functionality.
 
 * `Cult#minimum_age`
-  * returns a `Fixnum` that is the minimum age required for followers joining this cult
-* `Cult#recruit_follower`
-  * takes in an argument of a `Follower` instance and adds them to this cult's list of followers
+  * returns a `Fixnum` that is the minimum age required for astronauts joining this cult
+* `Cult#recruit_astronaut`
+  * takes in an argument of a `Follower` instance and adds them to this cult's list of astronauts
   * NOW this is changed such that if the given `Follower` instance is not of age:
     * do not let them join the cult
     * print out a friendly message informing them that they are too young
 * `Follower#join_cult`
-  * takes in an argument of a `Cult` instance and adds this follower to the cult's list of followers
+  * takes in an argument of a `Cult` instance and adds this astronaut to the cult's list of astronauts
   * NOW this is changed such that if you don't meet the minimum age requirement of the given `Cult` instance:
     * do not let them join the cult
     * print out a friendly message informing them that they are too young
