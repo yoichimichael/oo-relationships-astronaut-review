@@ -6,6 +6,8 @@ In this repo, we will be reviewing object relationships in Ruby, specifically th
 
 ## Introduction
 
+![NASA](https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiV4Mrm3vvjAhWjTt8KHY5ODvEQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.nasa.gov%2Fpress-release%2Fnasa-administrator-statement-on-nasa-s-moon-to-mars-plans-fy-2020-budget&psig=AOvVaw0pbyEFOCTngtrCfHYfGwV3&ust=1565644598057072)
+
 You've just been hired by NASA to create an app that tracks all of their missions to Mars. The application needs to be aware of the astronauts, the shuttles, and each mission to the Red Planet.
 
 ---
