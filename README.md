@@ -76,16 +76,16 @@ Questions you should ask yourself:
 * `Astronaut#shuttles`
   * returns an `Array` of this astronaut's shuttles
 * `Astronaut#join_shuttle`
-  * takes in an argument of a `Shuttle` instance and adds this astronaut to the shuttle's list of astronauts
+  * takes in an argument of a `Shuttle` instance and adds this astronaut to the shuttle's list of astronauts if it doesn't exceed this shuttle's capacity
 * `Astronaut.all`
   * returns an `Array` of all the astronauts
 * `Astronaut.most_missions`
-  * takes a `String` argument that is an astronaut's name and returns an instance of an astronaut who has been to Mars the most times 
+  * takes a `String` argument that is an astronaut's name and returns an instance of an astronaut who has been to Mars the most times
 
 **`MISSION`**
 
-* `Mission#initiation_date`
-  * returns a `String` that is the initiation date of this mission in the format _YYYY-MM-DD_.
+* `Mission#launch_date`
+  * returns a `Fixnum` that is the launch year of this mission to Mars.
 * `Mission.all`
   * returns an `Array` of all the missions
 
@@ -93,7 +93,7 @@ Questions you should ask yourself:
 
 ### Advanced Methods - Analytics!
 
-Our shuttle social network platform is working well. Let's first make a commit!
+Our tracking application is working well. Let's first make a commit!
 
 Now we want to build out some useful features so `Shuttle`s and `Astronaut`s and get more value out of our app.
 
