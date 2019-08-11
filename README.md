@@ -6,8 +6,7 @@ In this repo, we will be reviewing object relationships in Ruby, specifically th
 
 ## Introduction
 
-<img src="http://www.spitzer.caltech.edu/spitzer15/images/NASASelfies_Icon.png?1534553315" alt="NASA Logo" width="200"/>
-<!-- ![NASA](http://www.spitzer.caltech.edu/spitzer15/images/NASASelfies_Icon.png?1534553315 =250x) -->
+<img src="http://www.spitzer.caltech.edu/spitzer15/images/NASASelfies_Icon.png?1534553315" alt="NASA Logo" width="400"/>
 
 You've just been hired by NASA to create an app that tracks all of their missions to Mars. The application needs to be aware of the astronauts, the shuttles, and each mission to the Red Planet.
 
@@ -55,24 +54,18 @@ Questions you should ask yourself:
 
 **`SHUTTLE`**
 
-* `Shuttle#name`
-  * returns a `String` that is the shuttle's name
+* `Shuttle#model`
+  * returns a `Fixnum` that is the model number of the shuttle
 * `Shuttle#location`
   * returns a `String` that is the city where the shuttle is located
-* `Shuttle#founding_year`
-  * returns a `Fixnum` that is the year the shuttle was founded
-* `Shuttle#slogan`
-  * returns a `String` that is this shuttle's slogan
-* `Shuttle#recruit_astronaut`
-  * takes in an argument of a `Follower` instance and adds them to this shuttle's list of followers
+* `Shuttle#add_astronaut`
+  * takes in an argument of an `Astronaut` instance and adds them to this shuttle's list of astronauts
 * `Shuttle#shuttle_population`
-  * returns a `Fixnum` that is the number of followers in this shuttle
+  * returns a `Fixnum` that is the number of astronauts in this shuttle
 * `Shuttle.all`
-  * returns an `Array` of all the shuttles
+  * returns an `Array` of all the currently running shuttles
 * `Shuttle.find_by_name`
   * takes a `String` argument that is a name and returns a `Shuttle` instance whose name matches that argument
-* `Shuttle.find_by_location`
-  * takes a `String` argument that is a location and returns an `Array` of shuttles that are in that location
 * `Shuttle.find_by_founding_year`
   * takes a `Fixnum` argument that is a year and returns all of the shuttles founded in that year
 
@@ -82,12 +75,10 @@ Questions you should ask yourself:
   * returns a `String` that is the astronaut's name
 * `Astronaut#age`
   * returns a `Fixnum` that is the age of the astronaut
-* `Astronaut#life_motto`
-  * returns a `String` that is the astronaut's life motto
 * `Astronaut#shuttles`
   * returns an `Array` of this astronaut's shuttles
 * `Astronaut#join_shuttle`
-  * takes in an argument of a `Cult` instance and adds this astronaut to the shuttle's list of astronauts
+  * takes in an argument of a `S` instance and adds this astronaut to the shuttle's list of astronauts
 * `Astronaut.all`
   * returns an `Array` of all the astronauts
 * `Astronaut.of_a_certain_age`
