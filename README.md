@@ -1,3 +1,4 @@
+
 OO Relationships Review in Ruby
 ==============
 
@@ -31,7 +32,7 @@ Your goal is to build out all of the methods listed in the deliverables. Do your
 
 ### Domain Modeling
 
-First step is to model the domain you are building out. As a non-discriminatory cult recruitment platform, `Cult`s will have many `Follower`s while `Follower`s will be allowed to join many `Cult`s. How do they keep track of this? `BloodOath`s of course! You cannot join a `Cult` without making a `BloodOath`.
+First step is to model the domain you are building out. As tracking application for all of NASA, `Shuttle`s will have many `Astronaut`s while `Astronaut`s will be allowed to selected to ride on many `Shuttle`s. How do they keep track of this? Individual `Mission`s of course! You cannot join a `Shuttle` without being selected for a `Mission`.
 
 * What are your models?
 * What does your schema look like?
@@ -41,7 +42,7 @@ First step is to model the domain you are building out. As a non-discriminatory 
 
 ### Basic Class Attributes and Methods
 
-With your domain modeled, you now need to build out some basic functionality so both `Cult`s and `Follower`s can use your platform to make `BloodOath`s. A social network of cults if you will. So general searching type functionality.
+With your domain modeled, you now need to build out some basic functionality so that NASA HQ can create `Mission`s for both `Shuttle`s and `Astronaut`s. So general searching type functionality.
 
 Questions you should ask yourself:
 
