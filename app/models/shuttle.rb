@@ -20,6 +20,7 @@ class Shuttle
     end
   end
 
+  # helper method
   def missions
     Mission.all.select do |mission|
       mission.shuttle == self
@@ -36,6 +37,7 @@ class Shuttle
     end
   end
 
+  # use the helper method to return the astronauts currently on a shuttle 
   def current_astronauts
     missions.map do |mission|
       mission.astronaut

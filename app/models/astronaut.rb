@@ -16,10 +16,7 @@ class Astronaut
   end
 
   def self.most_missions
-    # Astronaut.all.find do |astronaut|
-    #   astronaut.missions.count
-    # end
-    #max_by
+    # let's use max_by
     Astronaut.all.max_by do |astronaut|
       astronaut.missions.count
     end
@@ -35,14 +32,15 @@ class Astronaut
   def shuttles
     # call this method on an astronaut instance
     # return all of the shuttles that belong to the astronaut
-    #go through the missions
+    # we must go through the missions
     missions.map do |mission|
       mission.shuttle
     end
   end
 
   def join_shuttle(launch_date, shuttle)
-    # compare: shuttle.capacity against current no of astronauts on that shuttle
+    # compare shuttle.capacity against current # of astronauts on that shuttle
+    # capacity should be GREATER THAN the current number of astronauts 
     if shuttle.capacity > shuttle.missions.length
       Mission.new(launch_date, self, shuttle)
     else
