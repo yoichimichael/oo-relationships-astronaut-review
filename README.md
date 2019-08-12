@@ -63,13 +63,13 @@ Questions you should ask yourself:
 * `Shuttle#capacity`
   * returns a `Fixnum` that is the total number of astronauts that the shuttle can host
 * `Shuttle#add_astronaut`
-  * takes in an argument of an `Astronaut` instance and a launch date, and adds them to this shuttle's list of astronauts _as long as it doesn't exceed the shuttle's capacity_
+  * takes in an argument of an `Astronaut` instance and a launch date, and adds them to this shuttle's list of astronauts as long _as it doesn't exceed the shuttle's capacity_.
 * `Shuttle#current_astronauts`
   * returns an `Array` of all the astronauts who have been on this shuttle
 * `Shuttle.all`
   * returns an `Array` of all of NASA's currently running shuttles
 * `Shuttle.find_by_model`
-  * takes a `String` argument that is a model number and returns a `Shuttle` instance that matches that argument
+  * takes a `String` argument of a model number and returns a `Shuttle` instance that matches that argument
 
 **`ASTRONAUT`**
 
@@ -80,7 +80,7 @@ Questions you should ask yourself:
 * `Astronaut#specialty`
   * returns a `String` that is the astronaut's focus of study on Mars
 * `Astronaut#shuttles`
-  * returns an `Array` of this astronaut's shuttles: past, present, and future
+  * returns an `Array` of this astronaut's shuttles
 * `Astronaut#join_shuttle`
   * takes in an argument of a `Shuttle` instance and a launch date, and adds this astronaut to the shuttle's list of astronauts _if it doesn't exceed that shuttle's capacity_. If the shuttle is already full, print the following message: `This shuttle is at capacity!`.
 * `Astronaut.all`
@@ -120,12 +120,10 @@ Now we want to build out some useful features so `Shuttle`s and `Astronaut`s can
 * `Shuttle.smallest_mission`
   * returns the `Shuttle` instance which has the least number of astronauts
 * `Shuttle.most_common_model`
-  * returns a `Fixnum` that is the most popular model number
+  * returns a `String` that is the most popular model number
 
 **`ASTRONAUT`**
 
-* `Astronaut.most_active`
-  * returns the `Astronaut` instance who has been assigned to the most shuttles
 * `Astronaut.top_three`
   * returns an `Array` of astronauts; they are the three most active astronauts
 
@@ -145,7 +143,7 @@ Our platform is done! Let's commit our code again!
 Now NASA wants to release this app so that their astronauts can use it to see their fellow shuttle members in advance of a mission. See if you can implement this method.
 
 * `Astronaut#fellow_mission_members`
-  * returns a unique `Array` of astronauts who are on the same mission as you
+  * returns a unique `Array` of astronauts who have been on the same shuttle as you
 
 A highly requested feature is to restrict ages for astronauts-- they need to be at least 25. See if you can implement this functionality.
 
@@ -156,11 +154,13 @@ A highly requested feature is to restrict ages for astronauts-- they need to be 
   * NOW this should function so that if the given `Astronaut` instance is not of age:
     * do not let them join the mission
     * print out a friendly message informing them that they are too young
+    * don't forget that an astronaut cannot join a shuttle that is at capacity
 * Edit `Astronaut#join_shuttle`
   * takes in an argument of a `Shuttle` instance and adds this astronaut to the shuttle's list of astronauts
   * NOW this should function so that if you don't meet the minimum age requirement of the given `Shuttle` instance:
     * do not let them join the mission
     * print out a friendly message informing them that they are too young
+    * don't forget that an astronaut cannot join a shuttle that is at capacity
 
 Congrats on finishing NASA's mission tracking app for Mars. Let's jump on a shuttle and make the first step towards exploring our solar system.
 
