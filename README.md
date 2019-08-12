@@ -58,41 +58,41 @@ Questions you should ask yourself:
 
 **`SHUTTLE`**
 
-* `Shuttle#model`
+- [ ] `Shuttle#model`
   * returns a `String` that is the model number of the shuttle
-* `Shuttle#capacity`
+- [ ] `Shuttle#capacity`
   * returns a `Fixnum` that is the total number of astronauts that the shuttle can host
-* `Shuttle#add_astronaut`
+- [ ] `Shuttle#add_astronaut`
   * takes in an argument of an `Astronaut` instance and a launch date, and adds them to this shuttle's list of astronauts as long _as it doesn't exceed the shuttle's capacity_.
-* `Shuttle#current_astronauts`
+- [ ] `Shuttle#current_astronauts`
   * returns an `Array` of all the astronauts on this shuttle
-* `Shuttle.all`
+- [ ] `Shuttle.all`
   * returns an `Array` of all of NASA's currently running shuttles
-* `Shuttle.find_by_model`
+- [ ] `Shuttle.find_by_model`
   * takes a `String` argument of a model number and returns a `Shuttle` instance that matches that argument
 
 **`ASTRONAUT`**
 
-* `Astronaut#name`
+- [ ] `Astronaut#name`
   * returns a `String` that is the astronaut's name
-* `Astronaut#age`
+- [ ] `Astronaut#age`
   * returns a `Fixnum` that is the age of the astronaut
-* `Astronaut#specialty`
+- [ ] `Astronaut#specialty`
   * returns a `String` that is the astronaut's focus of study on Mars
-* `Astronaut#shuttles`
+- [ ] `Astronaut#shuttles`
   * returns an `Array` of this astronaut's shuttles
-* `Astronaut#join_shuttle`
+- [ ] `Astronaut#join_shuttle`
   * takes in an argument of a `Shuttle` instance and a launch date, and adds this astronaut to the shuttle's list of astronauts _if it doesn't exceed that shuttle's capacity_. If the shuttle is already full, print the following message: `This shuttle is at capacity!`.
-* `Astronaut.all`
+- [ ] `Astronaut.all`
   * returns an `Array` of all the astronauts
-* `Astronaut.most_missions`
+- [ ] `Astronaut.most_missions`
   * returns an instance of an astronaut who has been to Mars the most times
 
 **`MISSION`**
 
-* `Mission#launch_date`
+- [ ] `Mission#launch_date`
   * returns a `Fixnum` that is the launch year of this mission to Mars.
-* `Mission.all`
+- [ ] `Mission.all`
   * returns an `Array` of all the missions
 
 ---
