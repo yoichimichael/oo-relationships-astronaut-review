@@ -37,11 +37,22 @@ class Shuttle
     end
   end
 
-  # use the helper method to return the astronauts currently on a shuttle 
+  # use the helper method to return the astronauts currently on a shuttle
   def current_astronauts
     missions.map do |mission|
       mission.astronaut
     end
+  end
+
+  def average_age
+    # self.missions = array
+    astronauts = self.missions.map do |mission|
+      mission.astronaut
+    end
+    ages = astronauts.map do |astronaut|
+      astronaut.age
+    end
+    (ages.reduce(:+) / ages.length).to_f
   end
 
 end
