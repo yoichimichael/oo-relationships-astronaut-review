@@ -7,7 +7,7 @@ class Shuttle
   def initialize(model = nil, capacity = 1)
     @model = model
     @capacity = capacity
-    @crew = []
+    @crew = [] #note: each 'member' is a hash {astro => date}
     Shuttle.all << self
   end
 
@@ -23,7 +23,16 @@ class Shuttle
   end
 
   def current_astronauts
-    self.crew.map { |member| member.keys[0].name }
+    crew.map { |member| member.keys[0].name }
+  end
+
+  def average_age
+    total_age = crew.sum { |member| member.keys[0].age  }
+    total_age / crew.count
+  end
+
+  def astronauts_specialties
+    crew.each { |member| puts member.keys[0].specialty }
   end
 
   #class methods
@@ -34,6 +43,16 @@ class Shuttle
 
   def self.find_by_model(model)
     self.all.find { |shuttle| shuttle.model == model }
+  end
+
+  def self.smallest_mission
+    self.all.min_by { |shuttle| shuttle.crew.count }
+  end
+
+  def self.most_common_model
+    model_occurences = Hash.new(0)
+    self.all.each { |shuttle| model_occurences[shuttle.model] += 1 }
+    model_occurences.each { |k, v| return k if v == model_occurences.values.max }
   end
 
 

@@ -15,8 +15,10 @@ class Astronaut
   def join_shuttle(shuttle, launch_date)
     if shuttle.crew.count < shuttle.capacity
       shuttle.crew << { self ==> launch_date }
+      @shuttles << shuttle
     else
       "This shuttle is at capacity!"
+    end
   end
 
   #class methods
@@ -32,5 +34,14 @@ class Astronaut
       num_of_missions
     end 
   end
+
+  def self.top_three
+    astronaut_mission_nums = Hash.new(0)
+    Mission.all.each do |mish|
+      mish.shuttle.crew.each { |member| astronaut_mission_nums[member.keys[0]] += 1 }
+    end
+    astronaut_mission_nums.max(3) { |k,v| v }  
+  end
+
 
 end
