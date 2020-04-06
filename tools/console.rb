@@ -30,12 +30,12 @@ m11 = Mission.new(whistler, 2011)
 m12 = Mission.new(adirondak, 2012)
 m14 = Mission.new(yosemite, 2014)
 m17 = Mission.new(discovery, 2017)
-m18_a = Missions.new(voyager, 2018)
-m18_b = Missions.new(whistler, 2018)
-m19 = Missions.new(adirondak, 2019)
-m20 = Missions.new(yosemit, 2020)
-m21_a = Missions.new(discovery, 2021)
-m21_b = Missions.new(voyager, 2021)
+m18_a = Mission.new(voyager, 2018)
+m18_b = Mission.new(whistler, 2018)
+m19 = Mission.new(adirondak, 2019)
+m20 = Mission.new(yosemite, 2020)
+m21_a = Mission.new(discovery, 2021)
+m21_b = Mission.new(voyager, 2021)
 
 
 

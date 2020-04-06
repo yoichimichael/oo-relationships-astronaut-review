@@ -17,16 +17,19 @@ class Shuttle
     Mission.all.select { |mish| mish.shuttle == self}
   end
 
-  def add_astronaut(astronaut, launch_date)
-    
+  def add_mission(launch_date)
+    Mission.new(self, launch_date)
+  end
+
+  def add_astronaut(astronaut, launch_date) # should this be add mission?
+    found_mission = missions.find { |mission| mission.launch_date == launch_date }
     if  astronaut.age < minimum_age
       "Does not meet age requirement"
-    elsif crew.count >= capacity 
+    elsif found_mission.crew.count >= capacity 
       "This shuttle is at capacity!"
     else
-      crew << { astronaut => launch_date }
+      found_mission.crew << astronaut
     end
-
   end
 
   def current_astronauts

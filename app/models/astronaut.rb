@@ -1,29 +1,34 @@
 class Astronaut
   attr_reader :name, :age, :specialty
-  attr_accessor :shuttles
+  attr_accessor #:shuttles
   
   @@all = []
 
   def initialize(name, age, specialty)
-    #if age < 25
-    # "Does not meet age requirement"
-    #else
+    #if age >= 25
       @name = name
       @age = age
       @specialty = specialty
-      @shuttles = []
+      #@shuttles = []
       Astronaut.all << self
     #end
   end
 
-  def join_shuttle(shuttle, launch_date)
-    if self.age < Shuttle.minimum.age
+  def missions
+    Mission.all.select { |mish| mish.crew.include?(self) }
+  end
+
+  def join_shuttle(shuttle, launch_date) ## should this be join_mission?
+    found_mission = Mission.all.find do |mission| 
+      mission.shuttle == shuttle && mission.launch_date == launch_date 
+    end
+    if age < shuttle.minimum_age
       "Does not meet age requirement"
-    elsif shuttle.crew.count >= shuttle.capacity
+    elsif found_mission.crew.count >= shuttle.capacity
       "This shuttle is at capacity!"
     else
-      shuttle.crew << { self => launch_date }
-      @shuttles << shuttle
+      found_mission.crew << self => launch_date
+      #@shuttles << shuttle
     end
   end
 
