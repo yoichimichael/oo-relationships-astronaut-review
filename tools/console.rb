@@ -37,7 +37,25 @@ m20 = Mission.new(yosemite, 2020)
 m21_a = Mission.new(discovery, 2021)
 m21_b = Mission.new(voyager, 2021)
 
+m22 = discovery.add_mission(2023)
 
+discovery.add_astronaut(mike, 2023)
+discovery.add_astronaut(sally, 2023)
+discovery.add_astronaut(jon, 2023)
+
+m11.add_crew_member(paul)
+m11.add_crew_member(hank)
+m11.add_crew_member(will)
+m11.add_crew_member(ellen)
+
+m17.add_crew_member(will)
+m17.add_crew_member(peter)
+m10_a.add_crew_member(rich)
+m14.add_crew_member(rich)
+m19.add_crew_member(rich)
+
+
+#discovery.add_astronaut(tad, 2023)
 
 binding.pry
 

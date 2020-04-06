@@ -1,13 +1,13 @@
 class Shuttle
   attr_reader :model, :capacity
-  attr_accessor :crew
+  attr_accessor #:crew
 
   @@all = []
 
-  def initialize(model = nil, capacity = 1)
+  def initialize(model, capacity)
     @model = model
     @capacity = capacity
-    @crew = [] #note: each 'member' is a hash {astro => date}
+    #@crew = [] #note: each 'member' is a hash {astro => date}
     Shuttle.all << self
   end
 
@@ -32,18 +32,21 @@ class Shuttle
     end
   end
 
-  def current_astronauts
-    crew.map { |member| member.keys[0].name }
+  def current_astronauts(launch_date) ## adjusting to have crew of ship attached to mission
+    found_mission = missions.find { |mish| mish.launch_date == launch_date }
+    found_mission.crew.map { |member| member.name }
   end
+  
+  ## moved to mission class with adjustments
+  # def average_age(mission) 
+  #   total_age = mission.crew.sum { |member| member.age  }
+  #   total_age / mission.crew.count
+  # end
 
-  def average_age
-    total_age = crew.sum { |member| member.keys[0].age  }
-    total_age / crew.count
-  end
-
-  def astronauts_specialties
-    crew.each { |member| puts member.keys[0].specialty }
-  end
+  ## moved to mission class with adjustments 
+  # def astronauts_specialties
+  #   crew.each { |member| puts member.keys[0].specialty }
+  # end
 
   def minimum_age
     25
@@ -59,15 +62,18 @@ class Shuttle
     self.all.find { |shuttle| shuttle.model == model }
   end
 
-  def self.smallest_mission
-    self.all.min_by { |shuttle| shuttle.crew.count }
-  end
+  ##moving to Mission w/ changes
+  # def self.smallest_mission
+  #   self.all.min_by { |shuttle| shuttle.crew.count }
+  # end
 
-  def self.most_common_model
-    model_occurences = Hash.new(0)
-    self.all.each { |shuttle| model_occurences[shuttle.model] += 1 }
-    model_occurences.each { |k, v| return k if v == model_occurences.values.max }
-  end
+
+  ##moving to Mission w/ changes
+  # def self.most_common_model
+  #   model_occurences = Hash.new(0)
+  #   self.all.each { |shuttle| model_occurences[shuttle.model] += 1 }
+  #   model_occurences.each { |k, v| return k if v == model_occurences.values.max }
+  # end
 
 
 end
