@@ -13,11 +13,18 @@ class Shuttle
 
   #instance methods
 
+  def missions
+    Mission.all.select { |mish| mish.shuttle == self}
+  end
+
   def add_astronaut(astronaut, launch_date)
-    if crew.count < capacity
-      crew << { astronaut => launch_date }
-    else
+    
+    if  astronaut.age < minimum_age
+      "Does not meet age requirement"
+    elsif crew.count >= capacity 
       "This shuttle is at capacity!"
+    else
+      crew << { astronaut => launch_date }
     end
 
   end
@@ -33,6 +40,10 @@ class Shuttle
 
   def astronauts_specialties
     crew.each { |member| puts member.keys[0].specialty }
+  end
+
+  def minimum_age
+    25
   end
 
   #class methods
