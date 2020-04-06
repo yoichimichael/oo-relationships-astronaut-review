@@ -5,13 +5,15 @@ class Astronaut
   @@all = []
 
   def initialize(name, age, specialty)
-    #if age >= 25
+    if age < 25
+      raise "You need to be 25 years old to get on this ride"
+    else
       @name = name
       @age = age
       @specialty = specialty
       #@shuttles = []
       Astronaut.all << self
-    #end
+    end
   end
 
   def missions

@@ -5,12 +5,12 @@ def reload
 end
 
 mike = Astronaut.new("Michael Smith", 26, "physics")
-tad = Astronaut.new("Theodore Milner", 24, "medecine")
+#tad = Astronaut.new("Theodore Milner", 24, "medecine")
 sally = Astronaut.new("Elizabeth Gardner", 31, "chemisty")
 jon = Astronaut.new("Jonathan", 40, "navigation")
 peter = Astronaut.new("Peter Venkman", 38, "spirituality")
 rich = Astronaut.new("Richard Polonyi", 41, "dentistry")
-megan = Astronaut.new("Megan Tellman", 23, "gardening")
+#megan = Astronaut.new("Megan Tellman", 23, "gardening")
 fran = Astronaut.new("Frances Dempsey", 32, "physiognamy")
 karen = Astronaut.new("Karen Kilgore", 34, "psychology")
 ellen = Astronaut.new("Ellen Farmer", 38, "engineering")
